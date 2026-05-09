@@ -42,10 +42,9 @@ async def upscrolled_profile_scraper(url):
 
         profile_json = raw[start:end]
         try:
-            profile = json.loads(profile_json)
-            return {"success": True, "profile": profile}
+            return json.loads(profile_json)
         except Exception as e:
-            return {"success": False, "message": str(e), "raw": profile_json}
+            return {"success": False, "message": "error"}
 
     if 'upscrolled.com' not in url or '/user/' not in url:
         return {"success": False, "message": "url is not supported"}
