@@ -1,0 +1,42 @@
+{
+  "actorSpecification": 1,
+  "name": "upscrolled-profile-scraper",
+  "version": "0.0",
+  "input": {
+    "title": "Upscrolled Profile Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "url": {
+        "title": "Profile URL",
+        "type": "string",
+        "description": "Upscrolled Profile URL to scrape",
+        "prefill": "https://share.upscrolled.com/en/user/c1466cfc-ff89-48c5-88f2-6247b39596c0",
+        "editor": "textfield"
+      }
+    },
+    "required": ["url"]
+  },
+  "output": {
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema",
+    "properties": {
+      "success": {
+        "type": "string",
+        "description": "Whether the request succeeded",
+        "template": "{{success}}"
+      },
+      "results": {
+        "type": "string",
+        "description": "Extracted profile content (name, username, profile picture, description, stats, metadata)",
+        "template": "{{results}}"
+      },
+      "message": {
+        "type": "string",
+        "description": "Error message if success is false",
+        "template": "{{message}}"
+      }
+    },
+    "required": ["success"]
+  }
+}
