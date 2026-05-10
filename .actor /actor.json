@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "upscrolled-profile-scraper",
-  "version": "1.0.0",
+  "version": "0.0",
   "input": {
     "title": "Upscrolled Profile Scraper Input",
     "type": "object",
