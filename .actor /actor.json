@@ -5,6 +5,7 @@
   "input": {
     "title": "Upscrolled Profile Scraper Input",
     "type": "object",
+    "schemaVersion": 1,
     "properties": {
       "url": {
         "title": "Profile URL",
